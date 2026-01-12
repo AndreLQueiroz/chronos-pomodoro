@@ -1,47 +1,201 @@
 <div align="center">
 
 # ⏱️ Chronos
-### Pomodoro Timer • Histórico • Configurações • UI moderna
+## Pomodoro Productivity Manager
 
-Um web app de produtividade baseado na técnica Pomodoro, com foco em experiência de uso, personalização dos ciclos e registro de sessões.
+Uma aplicação web para **gestão de foco, tempo e produtividade**, baseada na técnica Pomodoro, com histórico detalhado, personalização de ciclos e uma experiência visual moderna.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Made with](https://img.shields.io/badge/made%20with-HTML%2FCSS%2FJS-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Tech](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
 ---
 
-## 📌 Visão Geral
+## 📌 Sumário
 
-O **Chronos** é uma aplicação web para gerenciamento de tempo e foco usando a técnica **Pomodoro**.  
-Ele permite iniciar ciclos de foco, alternar pausas, personalizar durações e acompanhar um **histórico completo** das sessões realizadas.
-
-> Objetivo: transformar sessões de estudo/trabalho em um fluxo simples, visual e organizado.
+- [Visão Geral](#-visão-geral)
+- [Motivação do Projeto](#-motivação-do-projeto)
+- [Problema Resolvido](#-problema-resolvido)
+- [Solução Proposta](#-solução-proposta)
+- [Principais Funcionalidades](#-principais-funcionalidades)
+- [Fluxo de Uso](#-fluxo-de-uso)
+- [Arquitetura do Projeto](#-arquitetura-do-projeto)
+- [Stack Tecnológica](#-stack-tecnológica)
+- [Persistência de Dados](#-persistência-de-dados)
+- [Experiência do Usuário (UX/UI)](#-experiência-do-usuário-uxui)
+- [Acessibilidade](#-acessibilidade)
+- [Páginas da Aplicação](#-páginas-da-aplicação)
+- [Estrutura de Pastas](#-estrutura-de-pastas)
+- [Instalação e Execução](#-instalação-e-execução)
+- [Roadmap](#-roadmap)
+- [Possíveis Evoluções](#-possíveis-evoluções)
+- [Contribuição](#-contribuição)
+- [Licença](#-licença)
+- [Autor](#-autor)
 
 ---
 
-## ✨ Principais Recursos
+## 🔍 Visão Geral
 
-- **Timer Pomodoro** com contagem regressiva e indicação visual de ciclos
-- **Histórico de sessões** (tarefa, duração, data/hora, status, tipo)
-- **Configurações personalizadas** (foco, descanso curto e longo)
-- **Página 404 personalizada** com navegação amigável
-- **Interface dark moderna** e componentes bem espaçados para leitura e foco
-- Persistência via **LocalStorage** (configurações e histórico)
+O **Chronos** é um gerenciador de produtividade que aplica a técnica Pomodoro para auxiliar usuários a manterem foco contínuo em tarefas de estudo ou trabalho.
+
+A aplicação foi projetada para ser:
+- Simples de usar
+- Visualmente clara
+- Personalizável
+- Leve e rápida
+- Executável diretamente no navegador
 
 ---
 
-## 🖼️ Screenshots
+## 🎯 Motivação do Projeto
 
-> Coloque imagens do seu projeto aqui (recomendado).  
-Exemplo:
+Muitas ferramentas de produtividade são complexas, poluídas visualmente ou exigem autenticação desnecessária.
 
-- `./assets/screens/home.png`
-- `./assets/screens/history.png`
-- `./assets/screens/settings.png`
-- `./assets/screens/404.png`
+O Chronos nasceu com a proposta de:
+- Reduzir distrações
+- Priorizar clareza visual
+- Eliminar fricções de uso
+- Oferecer controle total ao usuário
 
-```txt
-📷 Dica: crie uma pasta assets/screens e salve as prints do site lá.
+---
+
+## ❗ Problema Resolvido
+
+Usuários que desejam aplicar a técnica Pomodoro frequentemente enfrentam:
+- Falta de controle de histórico
+- Interfaces confusas
+- Pouca personalização
+- Dependência de contas/logins
+
+---
+
+## 💡 Solução Proposta
+
+O Chronos resolve esses problemas oferecendo:
+- Timer simples e direto
+- Histórico persistente no navegador
+- Configurações totalmente ajustáveis
+- Navegação intuitiva entre páginas
+- Interface moderna em tema escuro
+
+---
+
+## 🚀 Principais Funcionalidades
+
+### ⏲️ Timer Pomodoro
+- Contagem regressiva precisa
+- Identificação visual do ciclo atual
+- Indicação de progresso por ciclos
+- Mensagens de orientação para foco
+
+### 📋 Histórico de Sessões
+- Registro automático de cada sessão
+- Informações salvas:
+  - Nome da tarefa
+  - Duração
+  - Data e horário
+  - Status (concluída/interrompida)
+  - Tipo (foco ou descanso)
+
+### ⚙️ Configurações Avançadas
+- Tempo de foco configurável
+- Descanso curto personalizável
+- Descanso longo ajustável
+- Salvamento automático das preferências
+
+### 🚧 Página 404 Customizada
+- Mensagem amigável e contextual
+- Links para páginas principais
+- Comunicação clara com o usuário
+
+---
+
+## 🔄 Fluxo de Uso
+
+1. Usuário define a tarefa
+2. Inicia o ciclo de foco
+3. O timer executa a contagem
+4. Ao finalizar, o sistema registra a sessão
+5. O usuário alterna entre foco e descanso
+6. Todo o fluxo é salvo automaticamente
+
+---
+
+## 🏗️ Arquitetura do Projeto
+
+O projeto segue uma arquitetura **client-side**, com separação de responsabilidades:
+
+- HTML: estrutura semântica
+- CSS: identidade visual e layout
+- JavaScript: lógica de negócio e estado
+
+---
+
+## 🧰 Stack Tecnológica
+
+| Tecnologia | Uso |
+|-----------|-----|
+| HTML5 | Estrutura da aplicação |
+| CSS3 | Layout, tema dark e responsividade |
+| JavaScript | Timer, lógica Pomodoro e histórico |
+| LocalStorage | Persistência de dados |
+
+---
+
+## 💾 Persistência de Dados
+
+O Chronos utiliza **LocalStorage** para armazenar:
+- Configurações do usuário
+- Histórico de sessões
+
+Não há envio de dados para servidores externos.
+
+---
+
+## 🎨 Experiência do Usuário (UX/UI)
+
+- Tema escuro para reduzir fadiga visual
+- Tipografia clara e hierarquia visual bem definida
+- Botões com feedback visual
+- Layout centralizado focado na tarefa
+
+---
+
+## ♿ Acessibilidade
+
+- Contraste adequado
+- Componentes grandes e legíveis
+- Navegação simples
+- Textos claros e objetivos
+
+---
+
+## 📄 Páginas da Aplicação
+
+- **Home**: Timer e ciclos
+- **Histórico**: Registro de sessões
+- **Configurações**: Ajuste de tempos
+- **404**: Página de erro personalizada
+
+---
+
+## 📁 Estrutura de Pastas
+
+```bash
+chronos/
+├── index.html
+├── history.html
+├── settings.html
+├── 404.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── timer.js
+│   ├── history.js
+│   └── settings.js
+└── assets/
+    └── screens/
