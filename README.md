@@ -1,58 +1,47 @@
-# ⏱️ Chronos — Pomodoro Timer
+<div align="center">
 
-Chronos é uma aplicação web de produtividade baseada na técnica **Pomodoro**, criada para ajudar no foco, organização de tarefas e acompanhamento de sessões de estudo/trabalho.  
-O projeto possui uma interface moderna e minimalista, com páginas de **timer**, **histórico**, **configurações** e uma **404 personalizada**.
+# ⏱️ Chronos
+### Pomodoro Timer • Histórico • Configurações • UI moderna
 
----
+Um web app de produtividade baseado na técnica Pomodoro, com foco em experiência de uso, personalização dos ciclos e registro de sessões.
 
-## 🚀 Funcionalidades
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Made with](https://img.shields.io/badge/made%20with-HTML%2FCSS%2FJS-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-- ⏲️ **Timer Pomodoro**
-  - Contagem regressiva do ciclo atual
-  - Indicação visual de ciclos
-  - Mensagens orientativas durante o uso
-
-- 📋 **Histórico**
-  - Registra tarefa, duração, data, status e tipo de sessão
-  - Opção de limpar histórico
-
-- ⚙️ **Configurações**
-  - Ajuste de tempo de foco
-  - Descanso curto e descanso longo
-  - Preferências salvas para próximos usos
-
-- 🚧 **Página 404 personalizada**
-  - Layout amigável e com links úteis para navegação
+</div>
 
 ---
 
-## 🧠 Técnica Pomodoro
+## 📌 Visão Geral
 
-A técnica Pomodoro divide o trabalho em ciclos de foco (ex.: 25 min) + pausas curtas.  
-Após alguns ciclos, é feito um descanso maior. Isso ajuda a manter concentração e reduzir cansaço mental.
+O **Chronos** é uma aplicação web para gerenciamento de tempo e foco usando a técnica **Pomodoro**.  
+Ele permite iniciar ciclos de foco, alternar pausas, personalizar durações e acompanhar um **histórico completo** das sessões realizadas.
 
----
-
-## 🛠️ Tecnologias
-
-- HTML5
-- CSS3
-- JavaScript
-- LocalStorage (para salvar configurações e histórico)
+> Objetivo: transformar sessões de estudo/trabalho em um fluxo simples, visual e organizado.
 
 ---
 
-## 📸 Telas
+## ✨ Principais Recursos
 
-- Home (Timer)
-- Histórico
-- Configurações
-- 404 (Página não encontrada)
+- **Timer Pomodoro** com contagem regressiva e indicação visual de ciclos
+- **Histórico de sessões** (tarefa, duração, data/hora, status, tipo)
+- **Configurações personalizadas** (foco, descanso curto e longo)
+- **Página 404 personalizada** com navegação amigável
+- **Interface dark moderna** e componentes bem espaçados para leitura e foco
+- Persistência via **LocalStorage** (configurações e histórico)
 
 ---
 
-## 📦 Como executar
+## 🖼️ Screenshots
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/chronos.git
+> Coloque imagens do seu projeto aqui (recomendado).  
+Exemplo:
+
+- `./assets/screens/home.png`
+- `./assets/screens/history.png`
+- `./assets/screens/settings.png`
+- `./assets/screens/404.png`
+
+```txt
+📷 Dica: crie uma pasta assets/screens e salve as prints do site lá.
