@@ -1,13 +1,13 @@
 <div align="center">
 
 # ⏱️ Chronos
-## Pomodoro Productivity Manager (TypeScript)
+## Pomodoro Productivity Manager (React + TypeScript)
 
-Uma aplicação web para **gestão de foco, tempo e produtividade**, baseada na técnica Pomodoro, com histórico detalhado, personalização de ciclos e uma experiência visual moderna.
+Uma aplicação web para **gestão de foco, tempo e produtividade**, baseada na técnica Pomodoro, com uma experiência visual moderna, componentes reutilizáveis e arquitetura organizada.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Tech](https://img.shields.io/badge/stack-TypeScript%20%7C%20HTML%20%7C%20CSS-orange)
+![Tech](https://img.shields.io/badge/stack-React%20%7C%20TypeScript%20%7C%20Vite-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -24,7 +24,8 @@ Uma aplicação web para **gestão de foco, tempo e produtividade**, baseada na 
 - [Arquitetura do Projeto](#-arquitetura-do-projeto)
 - [Stack Tecnológica](#-stack-tecnológica)
 - [Persistência de Dados](#-persistência-de-dados)
-- [Estrutura do Projeto (TypeScript)](#-estrutura-do-projeto-typescript)
+- [Experiência do Usuário (UX/UI)](#-experiência-do-usuário-uxui)
+- [Estrutura de Pastas](#-estrutura-de-pastas)
 - [Instalação e Execução](#-instalação-e-execução)
 - [Roadmap](#-roadmap)
 - [Licença](#-licença)
@@ -34,88 +35,72 @@ Uma aplicação web para **gestão de foco, tempo e produtividade**, baseada na 
 
 ## 🔍 Visão Geral
 
-O **Chronos** é um gerenciador de produtividade que aplica a técnica Pomodoro para auxiliar usuários a manterem foco contínuo em tarefas de estudo ou trabalho.
+O **Chronos** é um gerenciador de produtividade que aplica a técnica Pomodoro para ajudar usuários a manterem foco contínuo em tarefas de estudo ou trabalho.
 
 A aplicação foi projetada para ser:
 - Simples de usar
 - Visualmente clara
 - Personalizável
 - Leve e rápida
-- Executável diretamente no navegador
 
 ---
 
 ## 🎯 Motivação do Projeto
 
-Muitas ferramentas de produtividade são complexas, poluídas visualmente ou exigem autenticação desnecessária.
+Muitas ferramentas de produtividade são complexas, poluídas visualmente ou trazem fricções desnecessárias.
 
 O Chronos nasceu com a proposta de:
 - Reduzir distrações
 - Priorizar clareza visual
-- Eliminar fricções de uso
 - Oferecer controle total ao usuário
+- Manter uma base de código organizada e escalável (componentes + TS)
 
 ---
 
 ## ❗ Problema Resolvido
 
-Usuários que desejam aplicar a técnica Pomodoro frequentemente enfrentam:
-- Falta de controle de histórico
+Quem usa Pomodoro frequentemente enfrenta:
 - Interfaces confusas
 - Pouca personalização
-- Dependência de contas/logins
+- Falta de clareza do ciclo atual
+- Dificuldade de manter um fluxo de foco consistente
 
 ---
 
 ## 💡 Solução Proposta
 
-O Chronos resolve esses problemas oferecendo:
-- Timer simples e direto
-- Histórico persistente no navegador
-- Configurações totalmente ajustáveis
-- Navegação intuitiva entre páginas
-- Interface moderna em tema escuro
+O Chronos resolve isso oferecendo:
+- Timer direto e objetivo
+- Componentes reutilizáveis (UI consistente)
+- Identificação visual do ciclo
+- Base em React + TypeScript para manutenção fácil
 
 ---
 
 ## 🚀 Principais Funcionalidades
 
 ### ⏲️ Timer Pomodoro
-- Contagem regressiva precisa
+- Contagem regressiva
 - Identificação visual do ciclo atual
-- Indicação de progresso por ciclos
-- Mensagens de orientação para foco
+- Indicação de ciclos (bolinhas/progresso)
+- Ações de iniciar/pausar/resetar
 
-### 📋 Histórico de Sessões
-- Registro automático de cada sessão
-- Informações salvas:
-  - Nome da tarefa
-  - Duração
-  - Data e horário
-  - Status (concluída/interrompida)
-  - Tipo (foco ou descanso)
+### ⚙️ Interface modular
+- Componentes isolados (Container, CountDown, Cycles, Inputs, Buttons, etc.)
+- Reutilização de UI com consistência visual
 
-### ⚙️ Configurações Avançadas
-- Tempo de foco configurável
-- Descanso curto personalizável
-- Descanso longo ajustável
-- Salvamento automático das preferências
-
-### 🚧 Página 404 Customizada
-- Mensagem amigável e contextual
-- Links para páginas principais
-- Comunicação clara com o usuário
+> Se você já tiver histórico/config/localStorage implementado, dá pra adicionar uma seção aqui depois.
 
 ---
 
 ## 🏗️ Arquitetura do Projeto
 
-O projeto segue uma arquitetura **client-side**, com separação de responsabilidades e tipagem forte:
+O projeto é **SPA (Single Page Application)** com React, organizado por componentes:
 
-- **TypeScript**: regras de negócio, estado e tipagem
-- **HTML**: estrutura semântica
-- **CSS**: identidade visual e layout
-- **LocalStorage**: persistência no navegador
+- `App.tsx`: composição da interface principal
+- `components/`: componentes de UI e partes do timer
+- `styles/`: estilos globais/tema
+- `main.tsx`: bootstrap do React
 
 ---
 
@@ -123,48 +108,22 @@ O projeto segue uma arquitetura **client-side**, com separação de responsabili
 
 | Tecnologia | Uso |
 |-----------|-----|
-| TypeScript | Lógica do timer, histórico e configurações |
-| HTML5 | Estrutura da aplicação |
-| CSS3 | Layout, tema dark e responsividade |
+| React | Interface e componentes |
+| TypeScript | Tipagem e segurança no código |
 | Vite | Dev server e build |
-| LocalStorage | Persistência de dados |
+| CSS | Tema e responsividade |
 
 ---
 
 ## 💾 Persistência de Dados
 
-O Chronos utiliza **LocalStorage** para armazenar:
-- Configurações do usuário
-- Histórico de sessões
-
-Nenhum dado é enviado para servidores externos.
+- (Opcional / em desenvolvimento) **LocalStorage** pode ser usado para salvar preferências e histórico localmente, sem servidor.
 
 ---
 
-## 📁 Estrutura do Projeto (TypeScript)
+## 🎨 Experiência do Usuário (UX/UI)
 
-```bash
-chronos/
-├── public/
-│   ├── index.html
-│   ├── history.html
-│   ├── settings.html
-│   └── 404.html
-├── src/
-│   ├── styles/
-│   │   └── styles.css
-│   ├── pages/
-│   │   ├── home.ts
-│   │   ├── history.ts
-│   │   ├── settings.ts
-│   │   └── notFound.ts
-│   ├── core/
-│   │   ├── pomodoro.ts
-│   │   ├── storage.ts
-│   │   └── types.ts
-│   └── main.ts
-├── assets/
-│   └── screens/
-├── package.json
-├── tsconfig.json
-└── vite.config.ts
+- Tema escuro (reduz fadiga visual)
+- Tipografia clara e hierarquia bem definida
+- Componentes com layout centralizado e foco na tarefa
+- Feedback visual em botões e estados do timer
