@@ -1,13 +1,13 @@
 <div align="center">
 
 # ⏱️ Chronos
-## Pomodoro Productivity Manager
+## Pomodoro Productivity Manager (TypeScript)
 
 Uma aplicação web para **gestão de foco, tempo e produtividade**, baseada na técnica Pomodoro, com histórico detalhado, personalização de ciclos e uma experiência visual moderna.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Tech](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-orange)
+![Tech](https://img.shields.io/badge/stack-TypeScript%20%7C%20HTML%20%7C%20CSS-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
@@ -21,18 +21,12 @@ Uma aplicação web para **gestão de foco, tempo e produtividade**, baseada na 
 - [Problema Resolvido](#-problema-resolvido)
 - [Solução Proposta](#-solução-proposta)
 - [Principais Funcionalidades](#-principais-funcionalidades)
-- [Fluxo de Uso](#-fluxo-de-uso)
 - [Arquitetura do Projeto](#-arquitetura-do-projeto)
 - [Stack Tecnológica](#-stack-tecnológica)
 - [Persistência de Dados](#-persistência-de-dados)
-- [Experiência do Usuário (UX/UI)](#-experiência-do-usuário-uxui)
-- [Acessibilidade](#-acessibilidade)
-- [Páginas da Aplicação](#-páginas-da-aplicação)
-- [Estrutura de Pastas](#-estrutura-de-pastas)
+- [Estrutura do Projeto (TypeScript)](#-estrutura-do-projeto-typescript)
 - [Instalação e Execução](#-instalação-e-execução)
 - [Roadmap](#-roadmap)
-- [Possíveis Evoluções](#-possíveis-evoluções)
-- [Contribuição](#-contribuição)
 - [Licença](#-licença)
 - [Autor](#-autor)
 
@@ -114,24 +108,14 @@ O Chronos resolve esses problemas oferecendo:
 
 ---
 
-## 🔄 Fluxo de Uso
-
-1. Usuário define a tarefa
-2. Inicia o ciclo de foco
-3. O timer executa a contagem
-4. Ao finalizar, o sistema registra a sessão
-5. O usuário alterna entre foco e descanso
-6. Todo o fluxo é salvo automaticamente
-
----
-
 ## 🏗️ Arquitetura do Projeto
 
-O projeto segue uma arquitetura **client-side**, com separação de responsabilidades:
+O projeto segue uma arquitetura **client-side**, com separação de responsabilidades e tipagem forte:
 
-- HTML: estrutura semântica
-- CSS: identidade visual e layout
-- JavaScript: lógica de negócio e estado
+- **TypeScript**: regras de negócio, estado e tipagem
+- **HTML**: estrutura semântica
+- **CSS**: identidade visual e layout
+- **LocalStorage**: persistência no navegador
 
 ---
 
@@ -139,9 +123,10 @@ O projeto segue uma arquitetura **client-side**, com separação de responsabili
 
 | Tecnologia | Uso |
 |-----------|-----|
+| TypeScript | Lógica do timer, histórico e configurações |
 | HTML5 | Estrutura da aplicação |
 | CSS3 | Layout, tema dark e responsividade |
-| JavaScript | Timer, lógica Pomodoro e histórico |
+| Vite | Dev server e build |
 | LocalStorage | Persistência de dados |
 
 ---
@@ -152,50 +137,34 @@ O Chronos utiliza **LocalStorage** para armazenar:
 - Configurações do usuário
 - Histórico de sessões
 
-Não há envio de dados para servidores externos.
+Nenhum dado é enviado para servidores externos.
 
 ---
 
-## 🎨 Experiência do Usuário (UX/UI)
-
-- Tema escuro para reduzir fadiga visual
-- Tipografia clara e hierarquia visual bem definida
-- Botões com feedback visual
-- Layout centralizado focado na tarefa
-
----
-
-## ♿ Acessibilidade
-
-- Contraste adequado
-- Componentes grandes e legíveis
-- Navegação simples
-- Textos claros e objetivos
-
----
-
-## 📄 Páginas da Aplicação
-
-- **Home**: Timer e ciclos
-- **Histórico**: Registro de sessões
-- **Configurações**: Ajuste de tempos
-- **404**: Página de erro personalizada
-
----
-
-## 📁 Estrutura de Pastas
+## 📁 Estrutura do Projeto (TypeScript)
 
 ```bash
 chronos/
-├── index.html
-├── history.html
-├── settings.html
-├── 404.html
-├── css/
-│   └── styles.css
-├── js/
-│   ├── timer.js
-│   ├── history.js
-│   └── settings.js
-└── assets/
-    └── screens/
+├── public/
+│   ├── index.html
+│   ├── history.html
+│   ├── settings.html
+│   └── 404.html
+├── src/
+│   ├── styles/
+│   │   └── styles.css
+│   ├── pages/
+│   │   ├── home.ts
+│   │   ├── history.ts
+│   │   ├── settings.ts
+│   │   └── notFound.ts
+│   ├── core/
+│   │   ├── pomodoro.ts
+│   │   ├── storage.ts
+│   │   └── types.ts
+│   └── main.ts
+├── assets/
+│   └── screens/
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
